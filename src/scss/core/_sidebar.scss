@@ -30,9 +30,12 @@
 
   .sidebar-header {
     flex: 0 0 $sidebar-header-height;
-    padding: $sidebar-header-padding-y $sidebar-header-padding-x;
+    //padding: $sidebar-header-padding-y $sidebar-header-padding-x;
     text-align: center;
+    height: $main-header-height;
     background: $sidebar-header-bg;
+
+
   }
 
   .sidebar-form .form-control {

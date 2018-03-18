@@ -1,0 +1,37 @@
+<nav class="app-nav">
+  <header class="app-nav-header">
+
+  </header>
+  <div class="app-nav-body">
+    <nav class="sidebar-nav">
+      <ul class="nav">
+        <li class="nav-item nav-item-shortcut">
+          <a class="nav-link">
+            <i class="fa fa-bell-o"></i>
+          </a>
+        </li>
+        <ng-template ngFor let-navitem [ngForOf]="navigation">
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="[navitem.url]" routerLinkActive="active">
+              <i class="{{navitem.icon}}"></i>
+            </a>
+          </li>
+        </ng-template>
+      </ul>
+    </nav>`
+  </div>
+  <div class="app-nav-footer">
+    <ul class="nav">
+      <li class="nav-item nav-item-shortcut">
+        <a class="nav-link">
+          <i class="icon-people"></i>
+        </a>
+      </li>
+      <li class="nav-item nav-item-shortcut">
+        <a class="nav-link">
+          <i class="icon-settings"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
