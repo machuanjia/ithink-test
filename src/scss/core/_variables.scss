@@ -35,34 +35,27 @@ $vine:                                #00bf8f !default;
 $foursquare:                          #1073af !default;
 $vimeo:                               #aad450 !default;
 
-//Nav
-$nav-width:50px;
-$nav-header-height:60px;
-$nav-brand-minimized-logo-size:45px;
-$nav-bg:$gray-800 !default;
-
-
 // Navbar
 
 $navbar-height:                       55px !default;
 $navbar-bg:                           #fff !default;
 $navbar-border: (
-  bottom: (
-    size:                             1px,
-    style:                            solid,
-    color:                            $border-color
-  )
+        bottom: (
+                size:                             1px,
+                style:                            solid,
+                color:                            $border-color
+        )
 )  !default;
 $navbar-brand-width:                  155px !default;
 $navbar-brand-bg:                     #fff !default;
 $navbar-brand-logo:                   url('../img/logo.png') !default;
 $navbar-brand-logo-size:              70px auto !default;
 $navbar-brand-border: (
-  bottom: (
-    size:                             1px,
-    style:                            solid,
-    color:                            $border-color
-  )
+        bottom: (
+                size:                             1px,
+                style:                            solid,
+                color:                            $border-color
+        )
 ) !default;
 
 $navbar-brand-minimized-width:        50px !default;
@@ -71,7 +64,7 @@ $navbar-brand-minimized-logo:         url('../img/logo-symbol.png') !default;
 $navbar-brand-minimized-logo-size:    24px !default;
 $navbar-brand-minimized-border:       $navbar-brand-border !default;
 
-$navbar-color:                        $gray-300 !default;
+$navbar-color:                        $gray-600 !default;
 $navbar-hover-color:                  $gray-800 !default;
 $navbar-active-color:                 $gray-800 !default;
 $navbar-disabled-color:               $gray-300 !default;
@@ -88,7 +81,7 @@ $sidebar-minimized-height:            $sidebar-minimized-width !default;
 $sidebar-compact-width:               150px !default;
 $sidebar-compact-height:              $sidebar-compact-width !default;
 $sidebar-color:                       #fff !default;
-$sidebar-bg:                          $gray-700 !default;
+$sidebar-bg:                          $gray-800 !default;
 $sidebar-borders:                     none !default;
 $mobile-sidebar-width:                220px !default;
 
@@ -162,18 +155,18 @@ $sidebar-minimizer-hover-indicator:   str-replace(url("data:image/svg+xml;charse
 $top-nav-bg:                          #fff !default;
 $top-nav-color:                       $body-color !default;
 $top-nav-borders: (
-  bottom: (
-    size:                             1px,
-    style:                            solid,
-    color:                            $border-color
-  )
+        bottom: (
+                size:                             1px,
+                style:                            solid,
+                color:                            $border-color
+        )
 ) !default;
 $top-nav-ul-borders: (
-  all: (
-    size:                             1px,
-    style:                            solid,
-    color:                            $border-color
-  )
+        all: (
+                size:                             1px,
+                style:                            solid,
+                color:                            $border-color
+        )
 ) !default;
 
 $top-nav-hover-color:                 #fff !default;
@@ -184,11 +177,11 @@ $top-nav-height:                      $navbar-height - 15px !default;
 
 // Breadcrumb
 $breadcrumb-borders: (
-  bottom: (
-    size:                             1px,
-    style:                            solid,
-    color:                            $border-color
-  )
+        bottom: (
+                size:                             1px,
+                style:                            solid,
+                color:                            $border-color
+        )
 ) !default;
 
 // Aside
@@ -197,11 +190,11 @@ $aside-menu-width:                    250px !default;
 $aside-menu-color:                    $gray-800 !default;
 $aside-menu-bg:                       #fff !default;
 $aside-menu-borders: (
-  left: (
-    size:                             1px,
-    style:                            solid,
-    color:                            $border-color
-  )
+        left: (
+                size:                             1px,
+                style:                            solid,
+                color:                            $border-color
+        )
 ) !default;
 
 $aside-menu-nav-padding-y:            .75rem !default;
@@ -213,39 +206,12 @@ $footer-height:                       50px !default;
 $footer-bg:                           $gray-100 !default;
 $footer-color:                        $body-color !default;
 $footer-borders: (
-  top: (
-    size:                             1px,
-    style:                            solid,
-    color:                            $border-color
-  )
+        top: (
+                size:                             1px,
+                style:                            solid,
+                color:                            $border-color
+        )
 ) !default;
-
-
-//Main
-
-$main-header-height:60px;
-$main-header-border: (
-  bottom: (
-    size:                             1px,
-    style:                            solid,
-    color:                            $border-color
-  )
-)!default;
-$main-header-bg:$white;
-$main-body-padding:20px;
-
-
-//App-slider
-$app-slider-width:                    500px !default;
-$app-slider-bg:$white;
-$app-slider-border: (
-  left: (
-    size:                             1px,
-    style:                            solid,
-    color:                            $border-color
-  )
-)!default;
-
 
 // Cards
 

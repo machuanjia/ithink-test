@@ -1,5 +1,5 @@
 // IE10&11 Flexbox fix
-@media all and (-ms-high-contrast:none) {
+@media all and (-ms-high-contrast: none) {
   html {
     display: flex;
     flex-direction: column;
@@ -12,11 +12,18 @@ app-dashboard,
 app-root {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .app-header {
   flex: 0 0 $navbar-height;
+}
+
+.app-nav{
+  width:$nav-width;
+  height:100vh;
+  position: fixed;
 }
 
 .app-footer {
@@ -27,11 +34,24 @@ app-root {
   display: flex;
   flex-direction: row;
   flex-grow: 1;
-  overflow-x: hidden;
 
   .main {
-    flex: 1;
-    min-width: 0;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    app-main-header,.main-header{
+      height: $main-header-height;
+      display: block;
+    }
+    .main-header{
+      background: $main-header-bg;
+      @include borders($main-header-border);
+    }
+    .main-body{
+      flex-grow: 1;
+      overflow: auto;
+      padding: $main-body-padding;
+    }
   }
 
   .sidebar {
@@ -44,6 +64,14 @@ app-root {
   .aside-menu {
     // $aside-menu-width is the width of the columns
     flex: 0 0 $aside-menu-width;
+  }
+  app-slider{
+    display: flex;
+    flex-direction: column;
+    .app-slider{
+      flex-grow: 1;
+      display: flex;
+    }
   }
 }
 
@@ -61,6 +89,16 @@ app-root {
   }
 }
 
+.nav-fixed {
+  .app-header {
+    display: none;
+  }
+  .app-body {
+    margin-top: 0;
+  }
+
+}
+
 //
 // Sidebar
 //
@@ -71,16 +109,21 @@ app-root {
 }
 
 .sidebar-fixed {
+  &.nav-fixed {
+    .sidebar {
+      left:$nav-width;
+      height: calc(100vh);
+    }
+    .main, .app-footer {
+      margin-left: calc(#{$sidebar-width} + #{$nav-width});
+    }
+  }
   .sidebar {
     position: fixed;
     z-index: $zindex-sticky - 1;
     width: $sidebar-width;
     height: calc(100vh - #{$navbar-height});
-    // margin-top: - $navbar-height;
 
-    // .sidebar-nav {
-    //   height: calc(100vh - #{$navbar-height});
-    // }
   }
 
   .main, .app-footer {
@@ -163,6 +206,10 @@ app-root {
   }
 }
 
+
+
+
+
 //
 // Aside Menu
 //
@@ -177,6 +224,7 @@ app-root {
     position: fixed;
     right: 0;
     height: 100%;
+    top:$main-header-height;
 
     .tab-content {
       height: calc(100vh - #{$aside-menu-nav-padding-y * 2 + $font-size-base} - #{$navbar-height});
@@ -203,6 +251,32 @@ app-root {
 
     .tab-content {
       height: calc(100vh - #{$aside-menu-nav-padding-y * 2 + $font-size-base} - #{$navbar-height});
+    }
+  }
+}
+
+
+// app-slider
+.slider-hidden{
+  app-slider{
+    margin-right: - $app-slider-width;
+  }
+
+}
+.slider-fixed{
+  app-slider{
+    position: fixed;
+    right: 0;
+    height: 100%;
+    width: $app-slider-width;
+  }
+  .main {
+    margin-right: $app-slider-width;
+  }
+
+  &.slider-hidden {
+    .main {
+      margin-right: 0;
     }
   }
 }
@@ -294,9 +368,11 @@ app-root {
 .aside-menu {
   transition: margin-left $layout-transition-speed, margin-right $layout-transition-speed, width $layout-transition-speed, flex $layout-transition-speed;
 }
+
 .sidebar-nav {
   transition: width $layout-transition-speed;
 }
+
 .breadcrumb {
   transition: left $layout-transition-speed, right $layout-transition-speed, width $layout-transition-speed;
 }

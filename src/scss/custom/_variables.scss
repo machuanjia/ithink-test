@@ -1,0 +1,34 @@
+//Nav
+$nav-width:50px;
+$nav-header-height:60px;
+$nav-brand-minimized-logo-size:45px;
+$nav-bg:$gray-800 !default;
+
+$navbar-color:                        $gray-300 !default;
+$sidebar-bg:                          $gray-700 !default;
+
+
+//Main
+
+$main-header-height:60px;
+$main-header-border: (
+        bottom: (
+                size:                             1px,
+                style:                            solid,
+                color:                            $border-color
+        )
+)!default;
+$main-header-bg:$white;
+$main-body-padding:20px;
+
+
+//App-slider
+$app-slider-width:                    500px !default;
+$app-slider-bg:$white;
+$app-slider-border: (
+        left: (
+                size:                             1px,
+                style:                            solid,
+                color:                            $border-color
+        )
+)!default;

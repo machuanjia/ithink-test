@@ -4,6 +4,8 @@ import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 
 import { AppComponent } from './app.component';
 
+import { ElModule } from 'element-angular'
+
 // Import containers
 import {
   FullLayoutComponent,
@@ -77,7 +79,8 @@ import { ChartsModule } from 'ng2-charts/ng2-charts';
     AppRoutingModule,
     BsDropdownModule.forRoot(),
     TabsModule.forRoot(),
-    ChartsModule
+    ChartsModule,
+    ElModule.forRoot()
   ],
   declarations: [
     AppComponent,
