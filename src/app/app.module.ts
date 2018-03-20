@@ -58,6 +58,8 @@ import {
   SIDEBAR_TOGGLE_DIRECTIVES
 } from './directives';
 
+import {P404Component} from './views/pages/404.component';
+
 const APP_DIRECTIVES = [
   AsideToggleDirective,
   NAV_DROPDOWN_DIRECTIVES,
@@ -86,7 +88,8 @@ import { ChartsModule } from 'ng2-charts/ng2-charts';
     AppComponent,
     ...APP_CONTAINERS,
     ...APP_COMPONENTS,
-    ...APP_DIRECTIVES
+    ...APP_DIRECTIVES,
+    P404Component
   ],
   providers: [{
     provide: LocationStrategy,

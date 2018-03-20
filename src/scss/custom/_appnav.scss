@@ -29,6 +29,7 @@
     color: $sidebar-nav-link-color;
     text-decoration: none;
     background: $sidebar-nav-link-bg;
+    width: $nav-width;
     @include borders($sidebar-nav-link-borders);
     @if $enable-sidebar-nav-rounded {
       border-radius: $border-radius;

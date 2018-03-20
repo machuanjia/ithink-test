@@ -5,8 +5,6 @@
     flex-direction: column;
   }
 }
-
-// app-dashboard and app-root are Angular2+ selectors. You can add here your own selectors if you need.
 .app,
 app-dashboard,
 app-root {
@@ -16,42 +14,47 @@ app-root {
   overflow: hidden;
 }
 
-.app-header {
-  flex: 0 0 $navbar-height;
-}
-
-.app-nav{
-  width:$nav-width;
-  height:100vh;
+.app-nav {
+  width: $nav-width;
+  height: 100vh;
   position: fixed;
-}
-
-.app-footer {
-  flex: 0 0 $footer-height;
 }
 
 .app-body {
   display: flex;
   flex-direction: row;
   flex-grow: 1;
+  overflow: hidden;
 
   .main {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    app-main-header,.main-header{
-      height: $main-header-height;
+    position: relative;
+    .main-aside{
+      width: $main-aside-width;
+      background: $main-aside-bg;
       display: block;
+      height: 100vh;
+      position: absolute;
     }
-    .main-header{
-      background: $main-header-bg;
-      @include borders($main-header-border);
-    }
-    .main-body{
+    .main-content{
+      width:calc(100vw - #{$main-aside-width});
+      margin-left: $main-aside-width;
+      height: 100vh;
       flex-grow: 1;
-      overflow: auto;
-      padding: $main-body-padding;
+      display: flex;
+      flex-direction: column;
+      .main-header {
+        height: $main-header-height;
+        background: $main-header-bg;
+        @include borders($main-header-border);
+      }
+      .main-body {
+        flex-grow: 1;
+        overflow: auto;
+        padding: $main-body-padding;
+        overflow: auto;
+      }
     }
+
   }
 
   .sidebar {
@@ -65,10 +68,10 @@ app-root {
     // $aside-menu-width is the width of the columns
     flex: 0 0 $aside-menu-width;
   }
-  app-slider{
+  app-slider {
     display: flex;
     flex-direction: column;
-    .app-slider{
+    .app-slider {
       flex-grow: 1;
       display: flex;
     }
@@ -79,20 +82,12 @@ app-root {
 // header
 //
 .header-fixed {
-  .app-header {
-    position: fixed;
-    z-index: $zindex-sticky;
-    width: 100%;
-  }
   .app-body {
     margin-top: $navbar-height;
   }
 }
 
 .nav-fixed {
-  .app-header {
-    display: none;
-  }
   .app-body {
     margin-top: 0;
   }
@@ -111,11 +106,11 @@ app-root {
 .sidebar-fixed {
   &.nav-fixed {
     .sidebar {
-      left:$nav-width;
+      left: $nav-width;
       height: calc(100vh);
     }
-    .main, .app-footer {
-      margin-left: calc(#{$sidebar-width} + #{$nav-width});
+    .main {
+      margin-left: $nav-width;
     }
   }
   .sidebar {
@@ -126,12 +121,12 @@ app-root {
 
   }
 
-  .main, .app-footer {
+  .main {
     margin-left: $sidebar-width;
   }
 
   &.sidebar-hidden {
-    .main, .app-footer {
+    .main {
       margin-left: 0;
     }
   }
@@ -206,10 +201,6 @@ app-root {
   }
 }
 
-
-
-
-
 //
 // Aside Menu
 //
@@ -224,7 +215,7 @@ app-root {
     position: fixed;
     right: 0;
     height: 100%;
-    top:$main-header-height;
+    top: $main-header-height;
 
     .tab-content {
       height: calc(100vh - #{$aside-menu-nav-padding-y * 2 + $font-size-base} - #{$navbar-height});
@@ -255,16 +246,16 @@ app-root {
   }
 }
 
-
 // app-slider
-.slider-hidden{
-  app-slider{
+.slider-hidden {
+  app-slider {
     margin-right: - $app-slider-width;
   }
 
 }
-.slider-fixed{
-  app-slider{
+
+.slider-fixed {
+  app-slider {
     position: fixed;
     right: 0;
     height: 100%;
@@ -282,87 +273,8 @@ app-root {
 }
 
 //
-// Breadcrumb
-//
-.breadcrumb-fixed {
-  .main {
-    $breadcrumb-height: 2 * $breadcrumb-padding-y + $font-size-base + 1.5 * $spacer;
-    padding-top: $breadcrumb-height;
-  }
-
-  .breadcrumb {
-    position: fixed;
-    top: $navbar-height;
-    right: 0;
-    left: 0;
-    z-index: $zindex-sticky - 2;
-  }
-
-  // if sidebar + main + aside
-  .main:nth-child(2) {
-    .breadcrumb {
-      right: $aside-menu-width;
-      left: $sidebar-width;
-    }
-  }
-
-  // if sidebar + main
-  .main:first-child {
-    .breadcrumb {
-      right: $aside-menu-width;
-      left: 0;
-    }
-  }
-
-  // if  main + aside
-  .main:last-child {
-    .breadcrumb {
-      right: 0;
-    }
-  }
-
-  &.sidebar-minimized {
-    .main .breadcrumb {
-      left: $sidebar-minimized-width;
-    }
-  }
-
-  &.sidebar-hidden, &.sidebar-off-canvas {
-    .main .breadcrumb {
-      left: 0;
-    }
-  }
-
-  &.aside-menu-hidden, &.aside-menu-off-canvas {
-    .main .breadcrumb {
-      right: 0;
-    }
-  }
-}
-
-//
-// Footer
-//
-.footer-fixed {
-  .app-footer {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: $zindex-sticky;
-    height: $footer-height;
-  }
-
-  .app-body {
-    margin-bottom: $footer-height;
-  }
-}
-
-//
 // Animations
 //
-.app-header,
-.app-footer,
 .sidebar,
 .main,
 .aside-menu {
@@ -373,37 +285,11 @@ app-root {
   transition: width $layout-transition-speed;
 }
 
-.breadcrumb {
-  transition: left $layout-transition-speed, right $layout-transition-speed, width $layout-transition-speed;
-}
-
 //
 // Mobile layout
 //
 
 @include media-breakpoint-down(md) {
-  .app-header.navbar {
-    position: fixed !important;
-    z-index: $zindex-sticky;
-    width: 100%;
-    text-align: center;
-    background-color: $navbar-brand-bg;
-    @include borders($navbar-brand-border);
-
-    .navbar-toggler {
-      @if (lightness( $navbar-brand-bg ) > 40) {
-        color: $navbar-color;
-      } @else {
-        color: #fff;
-      }
-    }
-
-    .navbar-brand {
-      position: absolute;
-      left: 50%;
-      margin-left: - ($navbar-brand-width / 2);
-    }
-  }
 
   .app-body {
     margin-top: $navbar-height;

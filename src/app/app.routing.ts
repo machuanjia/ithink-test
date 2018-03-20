@@ -7,6 +7,8 @@ import {
   SimpleLayoutComponent
 } from './containers';
 
+import { P404Component } from './views/pages/404.component';
+
 export const routes: Routes = [
   {
     path: '',
@@ -70,7 +72,8 @@ export const routes: Routes = [
         loadChildren: './views/pages/pages.module#PagesModule',
       }
     ]
-  }
+  },
+  { path: '**', component: P404Component }
 ];
 
 @NgModule({
