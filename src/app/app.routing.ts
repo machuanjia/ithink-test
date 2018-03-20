@@ -21,6 +21,10 @@ export const routes: Routes = [
     },
     children: [
       {
+        path: 'im',
+        loadChildren: './views/im/im.module#ImModule'
+      },
+      {
         path: 'base',
         loadChildren: './views/base/base.module#BaseModule'
       },
