@@ -4,7 +4,7 @@ import {
     ActivatedRoute
 } from '@angular/router';
 
-import { navigation } from './../../../_main.nav';
+import { channelNavigation,groupNavigation,chatNavigation } from './_im.nav';
 
 @Component({
     selector: 'im-nav',
@@ -12,7 +12,9 @@ import { navigation } from './../../../_main.nav';
 })
 export class ImNavComponent implements OnInit {
 
-    public navigation = navigation;
+    public channelNavigation = channelNavigation;
+    public groupNavigation = groupNavigation;
+    public chatNavigation = chatNavigation;
 
     constructor(private router:Router,private activeRoute:ActivatedRoute){
 

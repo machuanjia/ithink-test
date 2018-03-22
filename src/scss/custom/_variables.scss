@@ -25,6 +25,15 @@ $main-header-bg:$white;
 $main-body-padding:20px;
 
 
+//aside nav
+$aside-title-color:                   $gray-200;
+$aside-nav-link-color:                $gray-300;
+$aside-nav-item-hover-bg:             theme-color("primary") !default;
+$aside-nav-item-hover-color:          #fff;
+$aside-nav-create-link-color:$gray-400;
+$aside-nav-create-link-hover-color:theme-color("primary") !default;
+
+
 //App-slider
 $app-slider-width:                    500px !default;
 $app-slider-bg:$white;

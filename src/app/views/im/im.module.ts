@@ -1,5 +1,6 @@
 import {NgModule} from '@angular/core';
 import {FormsModule} from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 import {ImNavComponent} from './nav/im.nav.component';
 import {ImChannelComponent} from './channel/im.channel.component';
@@ -15,6 +16,7 @@ import {CommonComponentModule} from './../../common';
     imports: [
         FormsModule,
         ImRoutingModule,
+        CommonModule,
         CommonComponentModule
     ],
     declarations: [

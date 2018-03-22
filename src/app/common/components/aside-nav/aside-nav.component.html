@@ -1,3 +1,11 @@
-<div>
-  aside nav
-</div>
+<ul class="aside-nav">
+  <ng-template ngFor let-navitem [ngForOf]="navigation">
+    <li class="aside-nav-item">
+      <i ngif="navitem.icon" class="aside-nav-icon {{navitem.icon}}"></i>
+      <a class="aside-nav-link" [routerLink]="[navitem.type+'/'+navitem.id]" routerLinkActive="active">
+        {{navitem.name}}
+      </a>
+      <span class="badge badge-pill badge-danger">{{navitem.badge.text}}</span>
+    </li>
+  </ng-template>
+</ul>

@@ -7,7 +7,54 @@
     </div>
 </div>
 <div class="main-aside-body">
-    <aside-nav></aside-nav>
+    <section class="aside-nav-wrap">
+        <div class="aside-nav-header">
+            <div class="aside-nav-title">
+                频道
+            </div>
+        </div>
+        <div class="aside-nav-body">
+            <aside-nav [navigation]="channelNavigation"></aside-nav>
+        </div>
+        <div class="aside-nav-footer">
+            <a href="javascript:;" class="aside-nav-create">+ 创建频道</a>
+        </div>
+    </section>
+
+    <hr class="aside-divider"/>
+
+
+    <section class="aside-nav-wrap">
+        <div class="aside-nav-header">
+            <div class="aside-nav-title">
+                私聊
+            </div>
+        </div>
+        <div class="aside-nav-body">
+            <aside-nav [navigation]="chatNavigation"></aside-nav>
+        </div>
+        <div class="aside-nav-footer">
+            <a href="javascript:;" class="aside-nav-create">+ 创建私聊</a>
+        </div>
+    </section>
+
+    <hr class="aside-divider"/>
+
+    <section class="aside-nav-wrap">
+        <div class="aside-nav-header">
+            <div class="aside-nav-title">
+                群聊
+            </div>
+        </div>
+        <div class="aside-nav-body">
+            <aside-nav [navigation]="groupNavigation"></aside-nav>
+        </div>
+        <div class="aside-nav-footer">
+            <a href="javascript:;" class="aside-nav-create">+ 创建群聊</a>
+        </div>
+    </section>
+
+
 </div>
 <div class="main-aside-footer">
 
