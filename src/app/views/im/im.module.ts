@@ -9,10 +9,13 @@ import {ImGroupComponent} from './group/im.group.component';
 import {ImComponent} from './im.component';
 import {ImRoutingModule} from './im-routing.module';
 
+import {CommonComponentModule} from './../../common';
+
 @NgModule({
     imports: [
         FormsModule,
-        ImRoutingModule
+        ImRoutingModule,
+        CommonComponentModule
     ],
     declarations: [
         ImComponent,

@@ -31,12 +31,23 @@ app-root {
     .main-aside{
       width: $main-aside-width;
       background: $main-aside-bg;
-      display: block;
+      display: flex;
+      flex-direction: column;
       height: 100vh;
       position: absolute;
+      &-header{
+        height: $main-aside-height;
+        padding: $main-aside-padding;
+      }
+      &-body{
+        flex-grow: 1;
+      }
+      &-footer{
+
+      }
     }
     .main-content{
-      width:calc(100vw - #{$main-aside-width});
+      width:calc(100vw - #{$main-aside-width} - #{$nav-width});
       margin-left: $main-aside-width;
       height: 100vh;
       flex-grow: 1;

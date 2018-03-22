@@ -1,22 +1,24 @@
 //Nav
-$nav-width:50px;
-$nav-header-height:60px;
-$nav-brand-minimized-logo-size:45px;
-$nav-bg:$gray-800 !default;
+$nav-width:                           50px;
+$nav-header-height:                   60px;
+$nav-brand-minimized-logo-size:       45px;
+$nav-bg:                              $gray-800 !default;
 
 $navbar-color:                        $gray-300 !default;
 $sidebar-bg:                          $gray-700 !default;
 
 
 //Main
-$main-aside-width:200px;
-$main-aside-bg:$gray-700;
-$main-header-height:60px;
+$main-aside-width:                    200px;
+$main-aside-height:                   60px;
+$main-aside-bg:                       $gray-700;
+$main-aside-padding:                  13px 10px 10px 10px;
+$main-header-height:                  60px;
 $main-header-border: (
         bottom: (
-                size:                             1px,
-                style:                            solid,
-                color:                            $border-color
+                size:                 1px,
+                style:                solid,
+                color:                $border-color
         )
 )!default;
 $main-header-bg:$white;
@@ -28,8 +30,8 @@ $app-slider-width:                    500px !default;
 $app-slider-bg:$white;
 $app-slider-border: (
         left: (
-                size:                             1px,
-                style:                            solid,
-                color:                            $border-color
+                size:                 1px,
+                style:                solid,
+                color:                $border-color
         )
 )!default;
