@@ -57,8 +57,11 @@ app-root {
       flex-direction: column;
       .main-header {
         height: $main-header-height;
+        min-height: $main-header-height;
         background: $main-header-bg;
         @include borders($main-header-border);
+        display: flex;
+        flex-direction: row;
       }
       .main-body {
         flex-grow: 1;

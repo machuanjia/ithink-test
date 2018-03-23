@@ -6,6 +6,10 @@ import {ImNavComponent} from './nav/im.nav.component';
 import {ImChannelComponent} from './channel/im.channel.component';
 import {ImChatComponent} from './chat/im.chat.component';
 import {ImGroupComponent} from './group/im.group.component';
+import {ImAffairComponent} from  './affair/im.affair.component';
+import {ImMessageComponent} from './message/im.message.component';
+import {ImFileComponent} from './file/im.file.component';
+
 
 import {ImComponent} from './im.component';
 import {ImRoutingModule} from './im-routing.module';
@@ -24,7 +28,10 @@ import {CommonComponentModule} from './../../common';
         ImNavComponent,
         ImChannelComponent,
         ImChatComponent,
-        ImGroupComponent
+        ImGroupComponent,
+        ImAffairComponent,
+        ImMessageComponent,
+        ImFileComponent
     ]
 })
 export class ImModule {

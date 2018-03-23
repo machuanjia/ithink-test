@@ -8,6 +8,9 @@ import {ImComponent} from './im.component';
 import {ImChannelComponent} from './channel/im.channel.component';
 import {ImChatComponent} from './chat/im.chat.component';
 import {ImGroupComponent} from './group/im.group.component';
+import {ImMessageComponent} from './message/im.message.component';
+import {ImAffairComponent} from  './affair/im.affair.component';
+import {ImFileComponent} from './file/im.file.component';
 
 const routes: Routes = [
     {
@@ -18,13 +21,43 @@ const routes: Routes = [
         },
         children: [{
             path: 'channel/:id',
-            component: ImChannelComponent
+            component: ImChannelComponent,
+            children:[{
+                path:'message',
+                component:ImMessageComponent
+            },{
+                path:'affair',
+                component:ImAffairComponent
+            },{
+                path:'file',
+                component:ImFileComponent
+            }]
         }, {
             path: 'chat/:id',
-            component: ImChatComponent
+            component: ImChatComponent,
+            children:[{
+                path:'message',
+                component:ImMessageComponent
+            },{
+                path:'affair',
+                component:ImAffairComponent
+            },{
+                path:'file',
+                component:ImFileComponent
+            }]
         }, {
             path: 'group/:id',
-            component: ImGroupComponent
+            component: ImGroupComponent,
+            children:[{
+                path:'message',
+                component:ImMessageComponent
+            },{
+                path:'affair',
+                component:ImAffairComponent
+            },{
+                path:'file',
+                component:ImFileComponent
+            }]
         }]
     }
 ];

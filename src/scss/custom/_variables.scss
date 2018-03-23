@@ -22,6 +22,15 @@ $main-header-border: (
         )
 )!default;
 $main-header-bg:$white;
+$main-header-text-color:$gray-600;
+$main-header-nav-color:$gray-600;
+$main-header-nav-border:(
+        bottom:(
+                size:1px,
+                style:solid,
+                color:$gray-700
+        )
+);
 $main-body-padding:20px;
 
 

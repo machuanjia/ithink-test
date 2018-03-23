@@ -21,7 +21,7 @@ export class ImNavComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        this.router.navigate(['/im/channel',123],{relativeTo:this.activeRoute});
+        this.router.navigate(['/im/channel',1],{relativeTo:this.activeRoute});
     }
 
 }

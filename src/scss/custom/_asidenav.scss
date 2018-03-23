@@ -42,7 +42,7 @@
       white-space: nowrap;
       overflow: hidden;
     }
-    &:hover{
+    &:hover,&.active{
       background: $aside-nav-item-hover-bg;
       .aside-nav-icon{
         color:$aside-nav-item-hover-color;
