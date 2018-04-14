@@ -1,6 +1,7 @@
 import {NgModule} from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 import {ImNavComponent} from './nav/im.nav.component';
 import {ImChannelComponent} from './channel/im.channel.component';

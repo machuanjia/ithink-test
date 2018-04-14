@@ -1,0 +1,8 @@
+<ng-container>
+    <div class="thy-entry-list" [sortablejs]="entry.tasks" [sortablejsOptions]="cardDraggableOptions">
+        <div class="thy-card-container" *ngFor="let task of entry.tasks">
+            <app-board-card [task]="task"></app-board-card>
+        </div>
+    </div>
+    <app-board-card-add [entry]="entry" *ngIf="entry.isAddComponentVisible"></app-board-card-add>
+</ng-container>

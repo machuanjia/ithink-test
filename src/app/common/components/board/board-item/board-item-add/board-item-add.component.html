@@ -1,0 +1,10 @@
+<div class="thy-entry">
+    <div class="thy-entry-add" (click)="toggleEntryContent()" *ngIf="!isEntryContent">
+        <i class="wtf wtf-plus"></i> 新建列表
+    </div>
+    <div class="thy-entry-add-content" *ngIf="isEntryContent">
+        <textarea class="thy-entry-add-content-name form-control" name="entryName" [(ngModel)]="entryName" autofocus></textarea>
+        <button thyButton="primary" thySize="sm" (click)="addEntryItem()">确定</button>
+        <button thyButton="link-secondary" thySize="sm" (click)="toggleEntryContent()">取消</button>
+    </div>
+</div>

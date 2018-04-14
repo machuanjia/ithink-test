@@ -1,0 +1,6 @@
+<div class="thy-board-main" [sortablejs]="entries" [sortablejsOptions]="entriesDraggableOptions">
+    <div class="thy-entry-wrapper" *ngFor="let entry of entries">
+        <app-board-item [entry]="entry"></app-board-item>
+    </div>
+    <app-board-item-add [class]="'ignore-elements'" (entryAdd)="entryAdd($event)"></app-board-item-add>
+</div>

@@ -68,6 +68,14 @@ app-root {
         overflow: auto;
         padding: $main-body-padding;
         overflow: auto;
+        @include flex-col;
+        .main-body-container{
+          @include flex-se1;
+          @include flex-col;
+        }
+        .main-body-content{
+          @include flex-col;
+        }
       }
     }
 

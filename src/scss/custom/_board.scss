@@ -1,0 +1,26 @@
+.app-board-layout{
+  @include flex-col;
+}
+
+
+
+.thy-board-wrapper {
+  @include flex-se1;
+  @include flex-col;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -moz-appearance: none;
+  -webkit-user-select: none;
+  padding: 15px 0 15px 8px;
+  .thy-board-main {
+    @include flex-se1;
+    @include flex-wrap;
+  }
+}
+
+.sortable-ghost {
+  opacity: 0.2
+}
+
+.sortable-drag {
+}

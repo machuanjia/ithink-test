@@ -1,0 +1,51 @@
+.thy-card-container {
+    mission-task-card {
+        display: block;
+    }
+}
+
+.thy-card-wrapper {
+    @include flex-row;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.18);
+    min-height: 50px;
+    margin-bottom: 10px;
+    background: #fff;
+    .thy-card-priority {
+        width: 3px;
+        background: $danger;
+    }
+    .thy-card-content {
+        @include flex-se1;
+        padding: 15px;
+        .thy-card-content-header {
+            @include flex-row;
+            .thy-card-content-header-left {}
+            .thy-card-content-header-right {
+                @include flex-se1;
+                @include flex;
+                justify-content: flex-end;
+            }
+        }
+        .thy-card-content-body {
+            .thy-card-name {
+                margin: 5px 0;
+            }
+        }
+        .thy-card-content-footer {
+            @include flex-wrap-param(wrap);
+            .thy-card-aside-item {
+                margin-right: 5px;
+                margin-bottom: 5px;
+            }
+        }
+    }
+}
+
+.thy-entry-list-item-add {
+    padding: 0 10px 10px 10px;
+    -ms-user-select: none !important;
+    .thy-entry-card-add-name {
+        margin-bottom: 10px;
+    }
+}
+

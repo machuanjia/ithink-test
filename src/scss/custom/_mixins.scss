@@ -1,0 +1,34 @@
+@mixin flex {
+    display: flex;
+}
+
+@mixin flex-col {
+    @include flex;
+    flex-direction: column;
+}
+
+@mixin flex-row {
+    @include flex;
+    flex-direction: row;
+}
+
+@mixin flex-wrap-param($wrap) {
+    @include flex;
+    flex-wrap: $wrap;
+}
+
+@mixin flex-wrap {
+    @include flex-wrap-param(nowrap);
+}
+
+@mixin flex-grow($size) {
+    flex-grow: $size;
+}
+
+@mixin flex-se1 {
+    @include flex-grow(1);
+}
+
+@mixin flex_all($grow, $shrink, $basis) {
+    flex: $grow $shrink $basis;
+}
